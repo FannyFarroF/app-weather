@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App Clima</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="min-h-screen">
+    <div id="app">
+        <div class="container mx-auto py-5">
+            <div class="grid grid-cols-2 gap-2 my-8">
+                <div class="card">
+                    <form id="form">
+                        <div class="form-group mb-3 rounded-3xl border-0 bg-custom focus:ring-2">
+                            <span type="submit" class="w-1/5 text-center p-3 text-gray-600 rounded-xl">
+                                <i class="fas fa-search"></i>
+                            </span>
+                            <input type="text" name="city" class="text-white bg-custom p-3 w-4/5 outline-0 " placeholder="Buscar ciudad">
+                        </div>
+                    </form>
+                </div>
+                <div class="card text-end">
+                    <label class="mt-4 inline-flex items-center me-5 cursor-pointer">
+                        <input type="checkbox" id="scala" value="true" class="sr-only peer" checked>
+                        <div class="relative w-11 h-6 bg-green-600 rounded-full peer dark:bg-green-700 peer-focus:ring-4 peer-focus:ring-purple-300 dark:peer-focus:ring-purple-800 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:start-[2px] after:bg-white after:border-green-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-green-600 peer-checked:bg-purple-600"></div>
+                        <span id="scala-title" class="ms-3 text-sm font-medium text-white dark:text-green-300">
+                            °C
+                        </span>
+                    </label>
+                </div>
+            </div>
+
+            <div id="results-search">
+                <div class="grid grid-cols-4 gap-2 my-8">
+                    <div id="card-main" class="card p-3 rounded-xl bg-custom">
+
+                    </div>
+                    <div class="card col-span-3">
+                        <div id="forescast-container" class="content-card flex flex-row gap-2 items-center text-center">
+                        </div>
+                    </div>
+                </div>
+                <div class="my-12">
+                    <h3 class="mb-3 text-white text-2xl font-bold">Otras Ciudades</h3>
+                    <div id="other-cities" class="grid grid-cols-4 gap-2">
+
+                    </div>
+                </div>
+            </div>
+            
+            <div id="spinner" class="text-center w-full">
+            </div>
+
+            <footer>
+                <div class="content-">
+                    <p class="text-center text-gray-300">
+                        &copy; 2024.
+                        <a href="https://devfannyfarro.netlify.app/" target="_blank"> Creado por: FFarro</a> 
+                    </p>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
