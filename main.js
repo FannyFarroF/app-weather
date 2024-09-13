@@ -154,7 +154,8 @@ function displayForecast(forecast) {
 function displayMainWeather(response) {
   const { main: {temp, feels_like}, sys: {country}, weather: [main], wind: {speed}  } = response;
   dataAPI = { temp, feels_like }
-
+  cardMain.innerHTML = ''
+  
   const card = `
     <div class="card-body">
       <div class="content-card flex flex-row items-center">
